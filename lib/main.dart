@@ -169,6 +169,7 @@ class HomeScreen extends StatelessWidget {
                   itemBuilder: (context, index) {
                     return Container(
                       padding: const EdgeInsets.all(12),
+                      margin: const EdgeInsets.only(right: 20),
                       height: 304,
                       width: 255,
                       decoration: BoxDecoration(
@@ -247,10 +248,63 @@ class HomeScreen extends StatelessWidget {
                             ],
                            )
 
-                        ],
+                      ],
+                    ),
+                );
+              }
+            )
+          ),
+          const SizedBox(
+            height: 30,
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Text('Short for you',
+              style: kPoppinsBold.copyWith(
+                color: kBlue, 
+                fontSize: 12),
+              ),
+               Text('View All',
+              style: kPoppinsMedium.copyWith(
+                color: kBlue, 
+                fontSize: 12),
+              ),
+            ],
+          ),
+          const SizedBox(
+            height: 19,
+          ),
+          SizedBox(
+            height: 88,
+            child: ListView.builder(
+              itemCount: 10,
+              scrollDirection: Axis.horizontal,
+              itemBuilder: (context, index){
+                  return Container(
+                      padding: const EdgeInsets.all(9),
+                      margin: const EdgeInsets.only(
+                        right: 20,
                       ),
-                    );
-                  })),
+                      width: 208,
+                      height: 88,
+                      decoration: BoxDecoration(
+                        color: kWhite,
+                        borderRadius: BorderRadius.circular(kBorderRadius),
+                        boxShadow: [
+                          BoxShadow(
+                            color: kDarkBlue.withOpacity(0.051),
+                            offset: const Offset(0.0, 3.0),
+                            blurRadius: 24.0,
+                            spreadRadius: 0.0
+                          )
+                        ]
+                      ),
+                  );
+              }
+            ),
+          )
         ],
       ),
     );
