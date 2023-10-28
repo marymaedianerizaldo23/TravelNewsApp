@@ -301,6 +301,62 @@ class HomeScreen extends StatelessWidget {
                           )
                         ]
                       ),
+                      child: Row(
+                        children: [
+                           Container(
+                            width: 70,
+                            height: 70,
+                            padding: const EdgeInsets.all(26),
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(kBorderRadius),
+                              image: const DecorationImage(
+                                fit: BoxFit.cover,
+                                image: NetworkImage('https://lp-cms-production.imgix.net/features/2019/05/Palawan-travel-936549056388.jpg?auto=format&w=730&h=630&fit=crop&q=75')
+                              )
+                            ),
+                            child: SvgPicture.asset(
+                              'assets/play_icon.svg'
+                            ),
+                           ),
+                           const SizedBox(
+                            width: 12
+                           ),
+                           Flexible(
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Text('Top trending island is 2022',
+                                  maxLines: 2,
+                                  overflow: TextOverflow.ellipsis,
+                                  style: kPoppinsBold.copyWith(
+                                    fontSize: 12
+                                  ),
+                                ),
+                                const SizedBox(
+                                  height: 12,
+                                ),
+                                Row(
+                                  children: [
+                                    SvgPicture.asset(
+                                      'assets/eye_icon.svg'
+                                    ),
+                                    const SizedBox(
+                                      width: 4,
+                                    ),
+                                    Text(
+                                      '40,999',
+                                      style: kPoppinsMedium.copyWith(
+                                        color: kGrey,
+                                        fontSize: 12
+                                      ),
+                                    )
+                                  ],
+                                )
+                              ],
+                            )
+                          )
+                        ]
+                      ),
                   );
               }
             ),
