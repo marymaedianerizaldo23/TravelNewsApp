@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:travel_news_app/app_styles.dart';
 import 'package:travel_news_app/size_config.dart';
 
@@ -51,9 +52,25 @@ class NewsDetailScreen extends StatelessWidget {
                               borderRadius: BorderRadius.circular(kBorderRadius),
                               border: Border.all(
                                 color: kWhite,
+                              ),
+                            ), 
+                            padding: const EdgeInsets.all(12),
+                            child: SvgPicture.asset('assets/arrow_back_icon.svg'
+                            ),                          
+                          ),
+                          Container(
+                            height: 50,
+                            width: 50,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(
+                                kBorderRadius,
+                              ),
+                              border: Border.all(
+                                color: kWhite,
                               )
                             ),
-                            
+                            padding: const EdgeInsetsDirectional.all(12),
+                            child: SvgPicture.asset('assets/bookmark_white_icon.svg'),
                           )
                         ],
                       ),
