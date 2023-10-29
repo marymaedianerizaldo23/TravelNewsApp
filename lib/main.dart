@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:travel_news_app/app_styles.dart';
+import 'package:travel_news_app/news_details_screen.dart';
 import 'package:travel_news_app/size_config.dart';
-import 'package:flutter/widgets.dart';
+
 
 void main() => runApp(const MyApp());
 
@@ -28,7 +29,7 @@ class _MyAppState extends State<MyApp> {
         debugShowCheckedModeBanner: false,
         home: Scaffold(
           backgroundColor: klighterWhite,
-          body: const HomeScreen(),
+          body: const NewsDetailScreen(),
           bottomNavigationBar: BottomNavigationBar(
             elevation: 0,
             type: BottomNavigationBarType.fixed,
@@ -272,7 +273,7 @@ class HomeScreen extends StatelessWidget {
                                           fontSize: 9)
                                         )
                                     ],
-                                  )
+                                  ),
                                 ],
                               ),
                               Container(
