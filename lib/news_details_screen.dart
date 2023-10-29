@@ -78,8 +78,21 @@ class NewsDetailScreen extends StatelessWidget {
                   )
                 ],  
               ),
-
-            )
+            ),
+            Container(
+              padding: const EdgeInsetsDirectional.symmetric(
+                horizontal: kPaddingHorizontal,
+              ),
+              transform: Matrix4.translationValues(0, -14, 0),
+              child: Text(
+                'Unravel Mysteries of the Maldives',
+                style: kPoppinsBold.copyWith(
+                  color: kDarkBlue,
+                  fontSize: 20,
+                ),
+              ),
+            ),
+          
 
           ],
         ),
