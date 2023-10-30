@@ -164,4 +164,237 @@ class ProfileScreen extends StatelessWidget {
                         ],
                       ),
                     ),
-                    
+                Container(
+                      width: 1,
+                      height: SizeConfig.blockSizeVertical! * 4,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(2),
+                        color: klighterBlue,
+                      ),
+                    ),
+                    Expanded(
+                      child: Column(
+                        children: [
+                          Text(
+                            '36.40k',
+                            style: kPoppinsBold.copyWith(
+                              color: kWhite,
+                              fontSize: SizeConfig.blockSizeHorizontal! * 4,
+                            ),
+                          ),
+                          Text(
+                            'Following',
+                            style: kPoppinsMedium.copyWith(
+                              color: kWhite,
+                              fontSize: SizeConfig.blockSizeHorizontal! * 3,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              SizedBox(
+                height: SizeConfig.blockSizeVertical! * 2.5,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Text(
+                    'Elly\'s Post',
+                    style: kPoppinsBold.copyWith(
+                      color: kDarkBlue,
+                      fontSize: SizeConfig.blockSizeHorizontal! * 4,
+                    ),
+                  ),
+                  Text(
+                    'View All',
+                    style: kPoppinsMedium.copyWith(
+                      color: kBlue,
+                      fontSize: SizeConfig.blockSizeHorizontal! * 3,
+                    ),
+                  )
+                ],
+              ),
+              SizedBox(
+                height: SizeConfig.blockSizeVertical! * 2.5,
+              ),
+              SizedBox(
+                child: ListView.builder(
+                  shrinkWrap: true,
+                  physics: const NeverScrollableScrollPhysics(),
+                  itemCount: 2,
+                  itemBuilder: (context, index) {
+                    return Container(
+                      height: 100,
+                      margin: EdgeInsets.only(
+                        bottom: SizeConfig.blockSizeVertical! * 2.5,
+                      ),
+                      child: Row(
+                        children: [
+                          Container(
+                            height: 100,
+                            width: 100,
+                            padding: const EdgeInsets.all(5),
+                            decoration: BoxDecoration(
+                              color: kWhite,
+                              borderRadius:
+                                  BorderRadius.circular(kBorderRadius),
+                              boxShadow: [
+                                BoxShadow(
+                                  blurRadius: 24,
+                                  spreadRadius: 0,
+                                  offset: const Offset(0, 3),
+                                  color: kDarkBlue.withOpacity(0.051),
+                                )
+                              ],
+                            ),
+                            child: ClipRRect(
+                              borderRadius:
+                                  BorderRadius.circular(kBorderRadius),
+                              child: Image.network(
+                                'https://images.unsplash.com/photo-1514282401047-d79a71a590e8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1365&q=80',
+                                fit: BoxFit.cover,
+                              ),
+                            ),
+                          ),
+                          SizedBox(
+                            width: SizeConfig.blockSizeVertical! * 2.5,
+                          ),
+                          Expanded(
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  'News: Politics',
+                                  style: kPoppinsRegular.copyWith(
+                                    color: kDarkBlue,
+                                    fontSize:
+                                        SizeConfig.blockSizeHorizontal! * 2.5,
+                                  ),
+                                ),
+                                SizedBox(
+                                  height: SizeConfig.blockSizeVertical! * 1,
+                                ),
+                                Text(
+                                  'Iran\'s raging protests Fifth Iranian paramilitary me...',
+                                  maxLines: 2,
+                                  overflow: TextOverflow.ellipsis,
+                                  style: kPoppinsSemiBold.copyWith(
+                                    color: kDarkBlue,
+                                    fontSize: 12,
+                                  ),
+                                ),
+                                const SizedBox(
+                                  height: 5,
+                                ),
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Row(
+                                      children: [
+                                        SvgPicture.asset(
+                                          'assets/calendar_icon.svg',
+                                        ),
+                                        SizedBox(
+                                          width:
+                                              SizeConfig.blockSizeHorizontal! *
+                                                  1.5,
+                                        ),
+                                        Text(
+                                          '16th May',
+                                          style: kPoppinsRegular.copyWith(
+                                            color: kGrey,
+                                            fontSize: 12,
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                    Row(
+                                      children: [
+                                        SvgPicture.asset(
+                                          'assets/time_icon.svg',
+                                        ),
+                                        SizedBox(
+                                          width:
+                                              SizeConfig.blockSizeHorizontal! *
+                                                  1.5,
+                                        ),
+                                        Text(
+                                          '09 : 32 pm',
+                                          style: kPoppinsRegular.copyWith(
+                                            color: kGrey,
+                                            fontSize: SizeConfig
+                                                    .blockSizeHorizontal! *
+                                                3,
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ],
+                                )
+                              ],
+                            ),
+                          )
+                        ],
+                      ),
+                    );
+                  },
+                ),
+              ),
+              SizedBox(
+                height: SizeConfig.blockSizeVertical! * 2.5,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Text(
+                    'Popular From Elly',
+                    style: kPoppinsBold.copyWith(
+                      color: kDarkBlue,
+                      fontSize: SizeConfig.blockSizeHorizontal! * 4,
+                    ),
+                  ),
+                ],
+              ),
+              SizedBox(
+                height: SizeConfig.blockSizeVertical! * 2.5,
+              ),
+              SizedBox(
+                height: 143,
+                child: ListView.builder(
+                  scrollDirection: Axis.horizontal,
+                  itemCount: 10,
+                  itemBuilder: (context, index) {
+                    return Container(
+                      height: 143,
+                      width: 248,
+                      margin: EdgeInsets.only(
+                        right: SizeConfig.blockSizeHorizontal! * 2.5,
+                      ),
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(
+                          kBorderRadius,
+                        ),
+                        child: Image.network(
+                          'https://images.unsplash.com/photo-1540202404-a2f29016b523?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3266&q=80',
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                    );
+                  },
+                ),
+              )
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
